@@ -1,1 +1,183 @@
-hello
+<!DOCTYPE html>
+<html>
+
+  <head>
+
+    <meta charset="utf-8">
+    <title>Portfolio</title>
+
+    <link href="style.css" rel="stylesheet">
+
+
+  </head>
+
+  <body>
+
+
+    <nav id="PC-nav">
+      <div>
+      <ul class="nav-links">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="visualizations.html">Visualizations</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+    </nav>
+
+    <nav id="ham-nav">
+      <div class="logo"> Rabab Altarazi</div>
+      <div class="ham-menu">
+        <div class="ham-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class ="menu-links">
+          <li><a href="home.html" onclick="toggleMenu()" >Home</a></li>
+          <li><a href="visualizations.html" onclick="toggleMenu()" >Visualizations</a></li>
+          <li><a href="#contact" onclick="toggleMenu()" >Contact</a></li>
+        </div>
+      </div>
+    </nav>
+
+    <section id="profile">
+      <div class="section__pic-container">
+        <img src="./files/Bubbles.jpg" alt="Rabab Altarazi's picture" class="bio-pic"/>
+      </div>
+      <div class="section__text">
+        <p class="section__text__p1">Hi, I'm</p>
+        <h1 class="title">Rabab Altarazi</h1>
+        <!--<p class="section__text__p2"></p>-->
+        <div class="details-containers">
+            <p>I study Interactive Arts and Technology :) ! <br />
+            And my areas of interest are 3D design, VR and AI</p>
+        </div>
+
+      </div>
+
+
+    </section>
+
+
+    <section id="education">
+      <p class="section__text__p1">Get To Know More</p>
+      <img src="./files/education.png" alt="Education Icon" class="icon"/>
+      <h1 class="title">Education</h1>
+      <div class="section-container">
+        <div class="section__pic-container">
+            <img src="./files/SFU.jpg" alt="Simon Fraser University" class="bio-pic"/>
+        </div>
+        <div class="about-details-container">
+            <div class="about-containers">
+                <div class="details-containers">
+                    <h3>Simon Fraser University</h3>
+                    <p> I started my journey in SFU as an Engineering student in 2019, 
+                        however I realized I'm more passionate about craetive projects 
+                        than technical ones, so I switched my major to 
+                        Interactive Arts and Technology, And I will be graduating in Summer 2025.</p>
+                </div>
+
+              </div>
+        </div>
+      </div>
+    </section>
+        
+    <section id="concentrations">
+        <h3 class="title">Concentrations</h3>
+        <div class="section-container">
+            <div class="about-details-container">
+                <div class="about-containers">
+                  <div class="details-containers">
+                      <h3>3D Design & VR</h3>
+                      <p> I started learning about 3D design in my first year in IAT 106, 
+                          and I enjoyed sketching spatial shapes and spaces. 
+                          But my love for 3D design started in IAT 233 where we learned more 
+                          about architecture and interior design. Then in IAT 343, 
+                          we learned how to do 3D animations from scratch using MAYA, 
+                          which made me realize 3D design is my passion. Finally, 
+                          I'm currently doing IAT 445 class that focuses on VR design, 
+                          where we learn how to implement objects and environments 
+                          and objects created in Maya into Unity, 
+                          to create an interactive experience or a video game. </p>
+                  </div>
+                  <div class="details-containers">
+                      <h3>Artificial Intelligence</h3>
+                      <p> My interest in AI started before joining SFU, 
+                        and after switching from Engineering, I was surprised 
+                        that my SIAT major has a new concentration for AI and 
+                        Data Science. I started by taking IAT 355 to learn about 
+                        visual analytics, and IAT 360 to learn about AI language 
+                        models and data systems and processing. And while these 
+                        materials are hard and intimidating, I enjoy learning about 
+                        things I'm curious about, and I'm excited for my last year AI courses. </p>
+                  </div>
+                </div>
+              </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <p class="section__text__p1">Some of My</p>
+        <img src="./files/skills.png" alt="Education Icon" class="icon"/>
+        <h1 class="title">Skills</h1>
+        <div class="section-container">
+            <div class="about-details-container">
+                <div class="about-containers">
+                  <div class="details-containers">
+                      <h3>Maya</h3>
+                  </div>
+                  <div class="details-containers">
+                    <h3>Figma</h3>
+                  </div>
+                  <div class="details-containers">
+                    <h3>User Research</h3>
+                  </div>
+                  <div class="details-containers">
+                    <h3>Python</h3>
+                  </div>
+                  <div class="details-containers">
+                    <h3>Java</h3>
+                  </div>
+                  <div class="details-containers">
+                    <h3>HTML & CSS</h3>
+                  </div>
+                  <div class="details-containers">
+                    <h3>Unity</h3>
+                  </div>
+                </div>
+              </div>
+        </div>
+    </section>
+
+    <section id="experience">
+
+    </section>
+
+    <section id="projects">
+
+    </section>
+
+    <section id="contact">
+
+    </section>
+
+    <!--
+    <footer>
+    <nav>
+      <div class="nav-links-container">
+        <ul class="nav-links">
+          <li><a href=""></a></li>
+          <li><a href=""></a></li>
+          <li><a href=""></a></li>
+        </ul>
+      </div>
+   </nav>
+   </footer>
+   -->
+    <script src="script.js"></script>
+
+
+
+
+  </body>
+</html>
