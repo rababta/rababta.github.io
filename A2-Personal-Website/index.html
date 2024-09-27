@@ -17,7 +17,7 @@
     <nav id="PC-nav">
       <div>
       <ul class="nav-links">
-        <li><a href="home.html">Home</a></li>
+        <li><a href="index.html">Bio</a></li>
         <li><a href="visualizations.html">Visualizations</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
@@ -33,7 +33,7 @@
           <span></span>
         </div>
         <div class ="menu-links">
-          <li><a href="home.html" onclick="toggleMenu()" >Home</a></li>
+          <li><a href="index.html" onclick="toggleMenu()" >Bio</a></li>
           <li><a href="visualizations.html" onclick="toggleMenu()" >Visualizations</a></li>
           <li><a href="#contact" onclick="toggleMenu()" >Contact</a></li>
         </div>
@@ -118,7 +118,7 @@
 
     <section id="skills">
         <p class="section__text__p1">Some of My</p>
-        <img src="./files/skills.png" alt="Education Icon" class="icon"/>
+        <img src="./files/skills.png" alt="Skills Icon" class="icon"/>
         <h1 class="title">Skills</h1>
         <div class="section-container">
             <div class="about-details-container">
@@ -150,14 +150,74 @@
     </section>
 
     <section id="experience">
+        <p class="section__text__p1">Take a Look at My</p>
+        <img src="./files/experience.png" alt="Experience Icon" class="icon"/>
+        <h1 class="title">Experience</h1>
+
+        
+            <div class="about-details-container">
+                <div class="about-containers">
+                  <div class="details-containers">
+                      <h3>2+ years of campaign leadership</h3>
+                  </div>
+
+                </div>
+            </div>
+            <div class="about-details-container">
+                <div class="about-containers">
+                  <div class="details-containers">
+                    <h3>1+ year of sales experience</h3>
+                  </div>
+
+                </div>
+            </div>
+        
+
+
 
     </section>
 
-    <section id="projects">
+    <!--
+    <section id="projects">  add projects here later 
 
     </section>
+    -->
 
     <section id="contact">
+
+        <p class="section__text__p1">Get in Touch</p>
+        <h1 class="title">Contact Me</h1>
+    
+    
+        <div class="contact-info-upper-container">
+          <form id="contactForm"action="/submit_form" method="post">
+    
+    
+          <label for="name" >Name:</label><br>
+          <input type="text" id="name" name="name" class="contact-info-upper-container" required><br>
+          <label for="email">Email:</label><br>
+          <input type="email" id="email" name="email" class="contact-info-upper-container" required><br>
+          <label for="subject">Subject:</label><br>
+          <input type="text" id="subject" name="subject" class="contact-info-upper-container" required><br>
+          <label for="message">Message:</label><br>
+          <textarea id="message" name="message" rows="4" class="contact-info-upper-container" required></textarea><br>
+          <input type="submit" value="Submit" class="btn btn-color-1">
+          </form>
+    
+          <div id="messageContainer"></div>
+        </div>
+    
+        <div class="contact-info-upper-container">
+
+          <div class="contact-info-container">
+            <h3> Find me on Github: </h3>
+            <button class="btn btn-color-1" onclick="location.href='https://github.com/rababta'">Github Profile</button>
+          </div>
+          <div class="contact-info-container">
+            <h3> Business email: </h3>
+            <p><a href="mailto:raltaraz@sfu.ca">raltaraz@sfu.ca</a></p>
+          </div>
+        </div>
 
     </section>
 
@@ -174,7 +234,7 @@
    </nav>
    </footer>
    -->
-    <script src="script.js"></script>
+    <script src="main.js"></script>
 
 
 

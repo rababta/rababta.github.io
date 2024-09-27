@@ -300,7 +300,7 @@ section {
 
 /* EDUCATION, SKILLS, AND EXPERIENCE SECTIONS */
 
-#education, #skills, #concentrations{
+#education, #concentrations, #skills, #experience{
   position: relative;
   text-align: center;
 }
@@ -333,6 +333,8 @@ section {
   border-color: rgb(163, 163, 163);
   text-align: center;
 }
+
+
 
 .section-container {
   gap: 4rem;
