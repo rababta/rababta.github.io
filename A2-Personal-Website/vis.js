@@ -1,52 +1,108 @@
-// Get the SVG element
-const svg = document.getElementById('leWittArt');
+// Create and render the bar chart
+// async function to load data from datasets/videogames_long.csv using d3.csv and then make visualizations
+async function render() {
+  // load data
+  const games = await d3.csv("./dataset/videogames_long.csv");
 
-// Define the radius of each circle in pixels
-const circleRadius = 10;
 
-// Number of circles to generate
-const circleCount = 2000;
+ // create heat map
+  const heatMap = vl
+ .markRect()
+ .data(games)
+ .encode(
+   vl.x().fieldN("platform"),
+   vl.y().fieldN("genre"),
+   vl.color()
+   .fieldQ("global_sales").aggregate("sum")
+   .scale({
+        domain: [0, 100],  
+        range: ["#c297e6", "#4b246b"] 
+      }),
+ )
 
-// Function to generate random colors
-// I used ChatGPT to ask how can I assign random colors to the circles 
-function getRandomColor() {
-  const r = Math.floor(Math.random() * 256); 
-  const g = Math.floor(Math.random() * 256); 
-  const b = Math.floor(Math.random() * 256); 
+ .width(600)
+ .height(400)
+ .toSpec();
+
+ vegaEmbed("#heatMap", heatMap).then((result) => {
+  const view = result.view;
+  view.run();
+ });
+
+   // create stacked bar
+   const stackedChart = vl
+   .markBar()
+   .data(games)
+   
+   .encode(
+     vl.x().fieldN("year"),
+     vl.y().fieldQ("sales_amount").aggregate("sum"), 
+     vl.color().fieldN("genre"),
+     vl.tooltip([vl.fieldN("platform")])
+   )
+
+
+   .width(800)
+   .height(400)
+   .toSpec();
+
+ 
+
+ vegaEmbed("#stackedChart", stackedChart).then((result) => {
+   const view = result.view;
+   view.run();
+ });
+
+
+    // create a point chart
+    const pointChart = vl
+    .markPoint() 
+    .data(games)
+    .encode(
+    vl.y().fieldQ("sales_amount").aggregate("sum"),
+    vl.x().fieldN("platform"),
+    vl.color().fieldN("sales_region")
+
+  )
+ 
+ 
+    .width(600)
+    .height(400)
+    .toSpec();
+ 
   
-  return `rgb(${r}, ${g}, ${b})`; 
+ 
+  vegaEmbed("#pointChart", pointChart).then((result) => {
+    const view = result.view;
+    view.run();
+  });
+
+
+      // create a circle chart
+      const circleChart = vl
+      .markCircle() 
+      .data(games)
+        .encode(
+          vl.x().fieldN("year"),
+          vl.y().fieldN("genre"),
+          vl.size().aggregate("count")
+  
+    )
+   
+   
+      .width(800)
+      .height(400)
+      .toSpec();
+   
+    
+   
+    vegaEmbed("#circleChart", circleChart).then((result) => {
+      const view = result.view;
+      view.run();
+    });
+ 
+
+
 }
 
-// Create circle function that appends a circle to the SVG
-function createCircle(cx, cy, r = circleRadius, fill = 'black') {
-  const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
-  
-  // Set attributes
-  circle.setAttribute('cx', cx);
-  circle.setAttribute('cy', cy);
-  circle.setAttribute('r', r);
-  circle.setAttribute('fill', fill);
-  
-  // Append circle to SVG
-  return circle;
-}
-
-// Function to generate random coordinates within the SVG canvas
-function getRandomPosition(width, height, padding = 100) {
-  const x = Math.random() * (width - padding * 2) + padding;
-  const y = Math.random() * (height - padding * 2) + padding;
-  return { x, y };
-}
-
-// Generate circles and add them to the SVG
-for (let i = 0; i < circleCount; i++) {
-  // Get random coordinates for the circle's center
-  const { x, y } = getRandomPosition(svg.clientWidth, svg.clientHeight);
-  
-  // Get a random color for the circle
-  const randomColor = getRandomColor();
-  
-  // Use the createCircle function to draw the circle with a random color
-  let circle = createCircle(x, y, circleRadius, randomColor);
-  svg.append(circle);
-}
+render();
