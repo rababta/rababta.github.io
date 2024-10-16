@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: white;
+      }
+      svg {
+        background-color: white;
+        border: 1px solid #ccc;
+        width: 100vw;
+        height: 100vh;
+      }
+    </style>
+
+    <title>Visualizations 1</title>
+    
+  </head>
+  <body>
+    <svg width ="500px" height="500px" xmlns="http://www.w3.org/2000/svg">
+
+      <!--
+        <rect x="50" y="50" width="40" height="100" fill="blue" />
+        <text x="70" y="170" font-family="ver"/>
+      -->
+      <text x="20" y="15" font-family="Verdana" font-size="14" fill="black" text-anchor="left">What did I do last week?</text>
+
+      <rect x="50" y="80" width="40" height="70" fill="blue" />
+      <text x="5" y="90" font-family="Verdana" font-size="12" fill="black" text-anchor="left">70%</text>
+
+      <rect x="120" y="120" width="40" height="30" fill="green" />
+      <text x="5" y="130" font-family="Verdana" font-size="12" fill="black" text-anchor="left">30%</text>
+
+
+      <rect x="190" y="140" width="40" height="10" fill="red" />
+      <text x="5" y="150" font-family="Verdana" font-size="12" fill="black" text-anchor="left">10%</text>
+
+
+      <rect x="260" y="100" width="40" height="50" fill="orange" />
+      <text x="5" y="110" font-family="Verdana" font-size="12" fill="black" text-anchor="left">50%</text>
+
+      <rect x="330" y="60" width="40" height="90" fill="black" />
+      <text x="5" y="70" font-family="Verdana" font-size="12" fill="black" text-anchor="left">90%</text>
+
+
+      <text x="70" y="190" font-family="Verdana" font-size="14" fill="black" text-anchor="middle">Study</text>
+      <text x="140" y="190" font-family="Verdana" font-size="14" fill="black" text-anchor="middle">Workout</text>
+      <text x="210" y="190" font-family="Verdana" font-size="14" fill="black" text-anchor="middle">Game</text>
+      <text x="280" y="190" font-family="Verdana" font-size="14" fill="black" text-anchor="middle">Go out</text>
+      <text x="350" y="190" font-family="Verdana" font-size="14" fill="black" text-anchor="middle">Sleep</text>
+    </svg>
+
+
+
+    <svg id="leWittArt"></svg>
+
+    <script src="vis1.js"></script>
+
+  </body>
